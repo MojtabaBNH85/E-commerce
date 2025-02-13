@@ -1,5 +1,5 @@
 <head>
-    
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,16 +21,12 @@
 
 
 <div class="container mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <div class="bg-white border rounded-lg p-4 flex flex-col item-center">
-            <img class="w-full h-48 object-cover rounded"src="{{$product->image_url}}" alt="{{$product->name}}">
+        <div class="bg-white border p-4 place-items-center  ">
+            <img class="w-96 " src="{{$product->image_url}}" alt="{{$product->name}}">
             <h5 class="text-lg font-bold">
-                {{$product->title}}
+                {{$product->name}}
             </h5>
-            <p class="text-gray-700">{{$product->description}}</p>
             <p class="text-gray-900 font-bold">{{$product->price}}</p>
-            <a href="{{route('products.show' , $product->id)}}">View Product</a>
+            <p class="text-gray-900 ">{{$product->description}}</p>
         </div>
-    </div>
 </div>
