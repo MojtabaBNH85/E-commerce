@@ -28,5 +28,12 @@
             </h5>
             <p class="text-gray-900 font-bold">{{$product->price}}</p>
             <p class="text-gray-900 ">{{$product->description}}</p>
+            <form action="{{route('cart.store')}}" method="post">
+                @csrf
+                <input type="hidden" name="product_id" value="{{$product->id}}">
+                <input type="number" name="quantity" value="1" min="1">
+                <button type="submit">Add To Cart</button>
+            </form>
+            <a href="{{route('products.index')}}">View All Products</a>
         </div>
 </div>
